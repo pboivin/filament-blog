@@ -29,6 +29,8 @@
                 {!! $slot ?? '' !!}
             </main>
 
+            <div class="mt-16"></div>
+
             <footer class="mt-auto text-center">
                 <x-container class="text-gray-700">
                     Copyright © {{ date('Y') }} ACME inc.
