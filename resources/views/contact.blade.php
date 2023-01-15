@@ -2,7 +2,7 @@
     <x-banner>Contact Us</x-banner>
 
     <x-container>
-        <div class="mt-8 max-w-[600px] mx-auto">
+        <div class="max-w-[600px] mt-8 mx-auto">
             <form action="#" method="POST">
                 <div class="mt-4">
                     <x-input name="name" label="Name" required />

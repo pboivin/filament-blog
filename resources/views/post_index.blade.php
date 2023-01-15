@@ -1,9 +1,9 @@
-<x-layout title="Contact">
+<x-layout title="Blog">
     <x-banner>
         All Posts
     </x-banner>
 
     <x-container>
-        Contact
+        ...
     </x-container>
 </x-layout>
