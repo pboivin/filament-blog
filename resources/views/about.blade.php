@@ -1,6 +1,6 @@
 <x-layout title="About">
     <x-banner>
-        About Us
+        <h1>About Us</h1>
     </x-banner>
 
     <x-container>
