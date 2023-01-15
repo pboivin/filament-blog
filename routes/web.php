@@ -1,23 +1,14 @@
 <?php
 
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::get('/blog', function () {
-    return view('post_index');
-})->name('post.index');
-
-Route::get('/blog/{slug}', function ($slug) {
-    return view('post_show', ['slug' => $slug]);
-})->name('post.show');
+Route::group(['prefix' => 'blog'], function () {
+    Route::get('/', [PostController::class, 'index'])->name('post.index');
+    Route::get('/{slug}', [PostController::class, 'show'])->name('post.show');
+});
