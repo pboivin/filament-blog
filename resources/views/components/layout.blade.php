@@ -17,14 +17,14 @@
                     <nav class="main-nav flex items-center">
                         @if ($siteName)
                             <div class="text-2xl">
-                                <a class="text-inherit" href="/">{{ $siteName }}</a>
+                                <a href="/">{{ $siteName }}</a>
                             </div>
                         @endif
 
                         <ul class="ml-auto flex items-center space-x-4">
-                            <li><a class="text-inherit" href="{{ route('post.index') }}">Blog</a></li>
-                            <li><a class="text-inherit" href="{{ route('about') }}">About</a></li>
-                            <li><a class="text-inherit" href="{{ route('contact') }}">Contact</a></li>
+                            <li><a href="{{ route('post.index') }}">Blog</a></li>
+                            <li><a href="{{ route('about') }}">About</a></li>
+                            <li><a href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                     </nav>
                 </x-container>
