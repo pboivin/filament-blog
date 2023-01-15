@@ -4,13 +4,14 @@
     </div>
 
     <x-container>
-        <h2 class="mt-8 text-2xl">Featured posts</h2>
+        @if ($featured->isNotEmpty())
+            <h2 class="mt-8 text-2xl">Featured posts</h2>
 
-
-        <div class="mt-10 grid gap-8 grid-cols-2">
-            @for ($i = 0; $i < 2; $i++)
-                <x-card></x-card>
-            @endfor
-        </div>
+            <div class="mt-10 grid gap-8 grid-cols-2">
+                @foreach ($featured as $post)
+                    <x-card :post="$post"></x-card>
+                @endforeach
+            </div>
+        @endif
     </x-container>
 </x-layout>

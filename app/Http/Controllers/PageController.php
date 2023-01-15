@@ -2,16 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
+use App\Models\Post;
+
 class PageController extends Controller
 {
     public function home()
     {
-        return view('home');
+        $featured = Post::featured()->get();
+
+        return view('home', ['featured' => $featured]);
     }
 
     public function about()
     {
-        return view('about');
+        abort_unless($page = Page::whereSlug('about')->first(), 404);
+
+        return view('about', ['page' => $page]);
     }
 
     public function contact()
