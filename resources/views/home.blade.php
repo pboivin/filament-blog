@@ -4,12 +4,13 @@
     </div>
 
     <x-container>
-        <h2 class="mt-8 text-xl">Featured posts</h2>
+        <h2 class="mt-8 text-2xl">Featured posts</h2>
 
-        <div class="mt-8 flex flex-col">
-            <a href="/blog/lorem">Lorem</a>
-            <a href="/blog/ipsum">Ipsum</a>
-            <a href="/blog/dolor">Dolor</a>
+
+        <div class="mt-10 grid gap-8 grid-cols-2">
+            @for ($i = 0; $i < 2; $i++)
+                <x-card></x-card>
+            @endfor
         </div>
     </x-container>
 </x-layout>

@@ -21,7 +21,7 @@
                             </div>
                         @endif
 
-                        <ul class="ml-auto flex items-center space-x-2">
+                        <ul class="ml-auto flex items-center space-x-4">
                             <li><a class="text-inherit" href="{{ route('post.index') }}">Blog</a></li>
                             <li><a class="text-inherit" href="{{ route('about') }}">About</a></li>
                             <li><a class="text-inherit" href="{{ route('contact') }}">Contact</a></li>

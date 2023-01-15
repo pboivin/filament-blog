@@ -4,32 +4,28 @@
     </x-banner>
 
     <x-container>
-        <div class="mt-8 flex items-center">
-            <select name="category" class="mr-4">
+        <div class="mt-8 flex items-center gap-4">
+            <x-select name="category">
                 <option value="">Categories</option>
                 <option value="animals">Animals</option>
                 <option value="mountains">Mountains</option>
                 <option value="people">People</option>
                 <option value="things">Things</option>
-            </select>
+            </x-select>
 
-            <select name="order" class="mr-4">
+            <x-select name="order">
                 <option value="date_desc">Show most recent</option>
                 <option value="date_asc">Show least recent</option>
-            </select>
+            </x-select>
 
             <div class="ml-auto">
                 Showing 10 of 30 posts
             </div>
         </div>
 
-        <div class="mt-10 grid gap-8 grid-cols-2 grid-rows-2">
+        <div class="mt-10 grid gap-16 grid-cols-2">
             @for ($i = 0; $i < 10; $i++)
-                <div>
-                    <img class="h-[200px] w-full object-cover object-center" src="https://picsum.photos/id/353/800/600" alt="">
-                    <h2 class="mt-3 text-xl">Lorem ipsum dolor sit</h2>
-                    <div class="mt-1">Published on 2022-01-01 under <a href="#">Animals</a></div>
-                </div>
+                <x-card></x-card>
             @endfor
         </div>
 
