@@ -10,7 +10,6 @@
         <h2 class="mt-3 text-xl">{{ $post->title }}</h2>
     </a>
     <div class="mt-1">
-        Published on {{ $post->published_at->format('M jS, Y') }} —
-        in <a href="{{ route('post.index', ['category' => $post->category->slug]) }}">{{ $post->category->name }}</a>
+        <x-post-meta :post="$post" />
     </div>
 </div>

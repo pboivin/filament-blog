@@ -16,7 +16,7 @@ class PostController extends Controller
             $activeCategory = $categories->first(fn ($i) => $i->slug === $activeCategorySlug);
         }
 
-        return view('post_index', [
+        return view('post-index', [
             'activeCategory' => $activeCategory ?? false,
             'categories' => $categories,
             'posts' => $posts,
@@ -27,6 +27,6 @@ class PostController extends Controller
     {
         abort_unless($post = Post::whereSlug($slug)->first(), 404);
 
-        return view('post_show', ['post' => $post]);
+        return view('post-show', ['post' => $post]);
     }
 }
