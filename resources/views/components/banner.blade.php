@@ -1,7 +1,9 @@
 @props(['image' => ''])
+
 @php
     $background = $image ? 'bg-black' : 'bg-gray-100';
 @endphp
+
 <div class="relative min-h-[200px] flex items-center justify-center {{ $background }}">
     @if ($image)
         <div
@@ -10,7 +12,7 @@
         ></div>
     @endif
 
-    <div class="relative z-1 text-6xl text-gray-700">
+    <div class="relative z-1 p-2 text-4xl text-gray-700 lg:text-6xl">
         {!! $slot !!}
     </div>
 </div>

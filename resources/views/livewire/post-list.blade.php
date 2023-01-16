@@ -9,7 +9,7 @@
 
     <x-container>
         @if ($postChunks->isNotEmpty())
-            <div class="mt-8 flex items-center gap-4">
+            <div class="mt-8 flex flex-col gap-4 lg:items-center lg:flex-row">
                 <x-select name="category" wire:model="category">
                     <option value="">Select category</option>
                     @foreach ($categories as $category)
@@ -25,7 +25,7 @@
                     <option value="date_asc">Show least recent</option>
                 </x-select>
 
-                <div class="ml-auto">
+                <div class="lg:ml-auto">
                     Found {{ $postCount }} {{ Str::plural('post', $postCount) }}
                 </div>
             </div>
