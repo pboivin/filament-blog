@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -73,5 +74,12 @@ class DatabaseSeeder extends Seeder
         for ($i=0; $i < 2; $i++) {
             $this->createPost(['published_at' => null]);
         }
+
+        // Admin user
+        $admin = new User();
+        $admin->name = 'Admin';
+        $admin->email = 'admin@test.test';
+        $admin->password = bcrypt($admin->email);
+        $admin->save();
     }
 }
