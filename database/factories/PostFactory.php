@@ -22,8 +22,7 @@ class PostFactory extends Factory
         return [
             'slug' => Str::slug($title),
             'title' => $title,
-            'main_image' => 'https://picsum.photos/id/353/800/600',
-            'main_image_type' => 'url',
+            'main_image_url' => 'https://picsum.photos/id/353/800/600',
             'category_id' => 1,
             'content' => implode('', [
                 '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.</p>',

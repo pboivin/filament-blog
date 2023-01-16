@@ -1,5 +1,5 @@
 <x-layout :title="$post->title">
-    <x-banner :image="$post->main_image">
+    <x-banner :image="$post->getMainImage()">
         <div class="text-4xl text-white">
             <h1>
                 {{ $post->title }}

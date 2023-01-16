@@ -4,7 +4,7 @@
     <a class="block text-black" href="{{ route('post.show', ['slug' => $post->slug]) }}">
         <img
             class="h-[200px] w-full object-cover object-center bg-gray-100"
-            src="{{ $post->main_image }}"
+            src="{{ $post->getMainImage() }}"
             alt=""
             loading="lazy"
         >

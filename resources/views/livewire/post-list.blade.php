@@ -11,7 +11,7 @@
         @if ($postChunks->isNotEmpty())
             <div class="mt-8 flex flex-col gap-4 lg:items-center lg:flex-row">
                 <x-select name="category" wire:model="category">
-                    <option value="">Select category</option>
+                    <option value="">All categories</option>
                     @foreach ($categories as $category)
                         <option
                             value="{{ $category->slug }}"

@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             'updated_at' => $date,
             'published_at' => $date,
             'category_id' => $category_key + 1,
-            'main_image' => $this->categories[$category_key]['image'],
+            'main_image_url' => $this->categories[$category_key]['image'],
         ];
 
         $data = array_merge($defaults, $data);

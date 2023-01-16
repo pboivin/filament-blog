@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('title');
             $table->text('content');
-            $table->text('main_image');
-            $table->string('main_image_type')->default('url');
+            $table->text('main_image_url')->nullable();
+            $table->text('main_image_upload')->nullable();
             $table->foreignId('category_id')->constrained('categories');
             $table->boolean('is_featured')->default(false);
         });
