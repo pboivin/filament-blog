@@ -16,6 +16,8 @@ class ContactEntryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
+    protected static ?string $navigationGroup = 'Contact';
+
     public static function form(Form $form): Form
     {
         return $form
