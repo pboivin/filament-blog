@@ -28,16 +28,14 @@ class Post extends Model
     public function scopePublished($query)
     {
         return $query
-            ->whereNotNull('published_at')
-            ->orderBy('published_at', 'desc');
+            ->whereNotNull('published_at');
     }
 
     public function scopeFeatured($query)
     {
         return $query
             ->whereNotNull('published_at')
-            ->where('is_featured', true)
-            ->orderBy('published_at', 'desc');
+            ->where('is_featured', true);
     }
 
     public function category()

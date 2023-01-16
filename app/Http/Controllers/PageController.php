@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     public function home()
     {
-        $featured = Post::featured()->get();
+        $featured = Post::featured()->orderBy('published_at', 'desc')->get();
 
         return view('home', ['featured' => $featured]);
     }
