@@ -47,7 +47,5 @@
         </div>
 
         @livewireScripts
-
-        <!-- test -->
     </body>
 </html>
